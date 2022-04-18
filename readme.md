@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/Jclong98/Frontend-Mentor-Advice-App)
-<!-- - Live Site URL: [Add live site URL here](https://your-live-site-url.com) -->
+- Solution URL: [https://github.com/Jclong98/Frontend-Mentor-Advice-App](https://github.com/Jclong98/Frontend-Mentor-Advice-App)
+- Live Site URL: [https://beautiful-kitsune-fe1c9f.netlify.app](https://beautiful-kitsune-fe1c9f.netlify.app)
 
 ## My process
 
