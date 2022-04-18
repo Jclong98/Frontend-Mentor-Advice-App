@@ -45,15 +45,10 @@ export function App() {
 
   // get slip on initial load
   useEffect(() => {
-    const locationArray = window.location.pathname.split('/')
+    const id = new URL(document.location.toString()).searchParams.get('id')
 
-    if (locationArray.length > 1) {
-      try {
-        getSlip(parseInt(locationArray[1]))
-      } catch (e) {
-        getSlip()
-      }
-    }
+    if (id) getSlip(parseInt(id))
+    else getSlip()
   }, [])
 
   return (
@@ -110,7 +105,10 @@ export function App() {
           Frontend Mentor
         </a>
         . Coded by{' '}
-        <a href="https://github.com/jclong98" className="text-emerald-400">
+        <a
+          href="https://github.com/Jclong98/Frontend-Mentor-Advice-App"
+          className="text-emerald-400"
+        >
           Jacob Long
         </a>
         .

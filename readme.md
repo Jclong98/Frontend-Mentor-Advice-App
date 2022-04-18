@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/jclong98/frontend-mentor-advice-app)
+- Solution URL: [Add solution URL here](https://github.com/Jclong98/Frontend-Mentor-Advice-App)
 <!-- - Live Site URL: [Add live site URL here](https://your-live-site-url.com) -->
 
 ## My process
