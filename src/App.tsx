@@ -30,13 +30,16 @@ export function App() {
     // don't want to overload them :)
     await sleep(delay)
 
+    // use fetch api to get data
     const response = await fetch(url.toString())
     const data = await response.json()
 
+    // if it has a slip, then we want to show it and remove the error
     if ('slip' in data) {
       setSlip(data.slip)
       setError({ hasError: false, message: '' })
     } else {
+      // otherwise, we want to show the error
       setError({ hasError: true, message: data.message.text })
     }
 
@@ -48,7 +51,7 @@ export function App() {
     const id = new URL(document.location.toString()).searchParams.get('id')
 
     if (id) getSlip(parseInt(id))
-    else getSlip(undefined, 0)
+    else getSlip(undefined, 0) // load first slip immediately
   }, [])
 
   return (
