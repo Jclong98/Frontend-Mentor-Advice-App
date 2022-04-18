@@ -17,7 +17,7 @@ export function App() {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<Error>({ hasError: false, message: '' })
 
-  const getSlip = async (id?: number) => {
+  const getSlip = async (id?: number, delay = 1000) => {
     setLoading(true)
 
     // starting with a base url
@@ -28,7 +28,7 @@ export function App() {
 
     // making sure the api has a break in between requests
     // don't want to overload them :)
-    await sleep(1000)
+    await sleep(delay)
 
     const response = await fetch(url.toString())
     const data = await response.json()
@@ -48,7 +48,7 @@ export function App() {
     const id = new URL(document.location.toString()).searchParams.get('id')
 
     if (id) getSlip(parseInt(id))
-    else getSlip()
+    else getSlip(undefined, 0)
   }, [])
 
   return (
