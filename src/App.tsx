@@ -75,7 +75,7 @@ export function App() {
           alt="divider"
         />
 
-        <div className="absolute flex justify-center left-0 right-0 -bottom-9">
+        <div className="absolute flex justify-center left-0 right-0 -bottom-8">
           {/* this piece is for the glowing background */}
           <div className="relative group">
             <div
@@ -85,7 +85,7 @@ export function App() {
             ></div>
 
             <button
-              className="relative bg-neon-green p-6 rounded-full disabled:bg-grayish-blue disabled:cursor-wait transition duration-200"
+              className="relative bg-neon-green p-5 rounded-full disabled:bg-grayish-blue disabled:cursor-wait transition duration-200"
               onClick={() => getSlip()}
               disabled={loading}
             >
