@@ -31,7 +31,7 @@ export default defineConfig({
         }),
       ],
       rules: [
-        ['icon', { width: '1.25em', height: '1.25em' }],
+        ['icon', { width: '1.5em', height: '1.5em' }],
         ['text-28', { 'font-size': '28px' }],
         ['tracking-widester', { 'letter-spacing': '0.25em' }],
         ['glow', { 'box-shadow': '0 0 1.5em' }],
