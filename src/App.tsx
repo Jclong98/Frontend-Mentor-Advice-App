@@ -55,15 +55,15 @@ export function App() {
   }, [])
 
   return (
-    <div className="min-h-screen bg-slate-800 grid place-items-center text-lightcyan font-manrope font-extrabold">
-      <main className="bg-slate-700 rounded-xl shadow-2xl text-center grid relative px-8 py-10 gap-7 sm:w-[525px] m-4">
-        <h1 className="text-emerald-400 text-xs tracking-widester">
+    <div className="min-h-screen bg-dark-blue grid place-items-center text-lightcyan font-manrope font-extrabold">
+      <main className="bg-dark-grayish-blue rounded-xl shadow-2xl text-center grid relative px-8 py-10 gap-7 sm:w-[525px] m-4">
+        <h1 className="text-neon-green text-xs tracking-widester">
           ADVICE #{slip.id}
         </h1>
 
         <p
           className={`text-28 ${
-            error.hasError ? 'text-red-300' : 'text-slate-300'
+            error.hasError ? 'text-red-300' : 'text-light-cyan'
           }`}
         >
           {error.hasError ? error.message : slip.advice}
@@ -80,12 +80,12 @@ export function App() {
           <div className="relative group">
             <div
               className={`absolute ${
-                loading ? 'bg-emerald-500/0' : 'bg-emerald-500/75'
+                loading ? 'bg-neon-green/0' : 'bg-neon-green/75'
               } -inset-1 rounded-full blur opacity-0 group-hover:opacity-100 transition duration-200`}
             ></div>
 
             <button
-              className="relative bg-emerald-400 p-4 rounded-full disabled:bg-slate-500 disabled:cursor-wait transition duration-200"
+              className="relative bg-neon-green p-4 rounded-full disabled:bg-grayish-blue disabled:cursor-wait transition duration-200"
               onClick={() => getSlip()}
               disabled={loading}
             >
@@ -103,14 +103,14 @@ export function App() {
         <a
           href="https://www.frontendmentor.io?ref=challenge"
           target="_blank"
-          className="text-emerald-400"
+          className="text-neon-green"
         >
           Frontend Mentor
         </a>
         . Coded by{' '}
         <a
           href="https://github.com/Jclong98/Frontend-Mentor-Advice-App"
-          className="text-emerald-400"
+          className="text-neon-green"
         >
           Jacob Long
         </a>
