@@ -10,7 +10,7 @@ interface Error {
   message: string
 }
 
-const sleep = (ms: number) => new Promise(resolve => setTimeout(resolve, ms))
+const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms))
 
 export function App() {
   const [slip, setSlip] = useState<Slip>({ id: 0, advice: '' })
@@ -69,11 +69,17 @@ export function App() {
           {error.hasError ? error.message : slip.advice}
         </p>
 
-        <img
-          className="mx-auto mb-6"
-          src="/pattern-divider-desktop.svg"
-          alt="divider"
-        />
+        <picture>
+          <source
+            media="(min-width: 375px)"
+            srcSet="/pattern-divider-desktop.svg"
+          />
+          <img
+            className="mx-auto mb-6"
+            src="/pattern-divider-mobile.svg"
+            alt="divider"
+          />
+        </picture>
 
         <div className="absolute flex justify-center left-0 right-0 -bottom-8">
           {/* this piece is for the glowing background */}
